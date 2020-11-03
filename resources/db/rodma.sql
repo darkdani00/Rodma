@@ -9,7 +9,8 @@ CREATE TABLE usuario (
     pass_usuario VARCHAR(30) not NULL,
     nombre_usuario VARCHAR(60),
     apellidos VARCHAR(60),
-    telefono int
+    telefono int,
+    permisos enum('comprador','administrador') DEFAULT 'comprador' not NULL
 );
 
 CREATE VIEW user_vw AS SELECT id_usuario, status_usuario, correo_usuario FROM usuario;
@@ -30,5 +31,4 @@ CREATE TABLE pedido(
 );
 
 
-INSERT INTO (puertos,monitor,tarjeta_madre,tarjeta_video,gabinete,fuente_poder,procesador,ram,precio_total)
-VALUES ();
+INSERT INTO pedido (puertos,monitor,tarjeta_madre,tarjeta_video,gabinete,fuente_poder,procesador,ram,precio_total,usuariofk) VALUES ('teclado y mouse','4k','nvida31','ryzen5','hp','650','ryzen7','32gb','101221',1);

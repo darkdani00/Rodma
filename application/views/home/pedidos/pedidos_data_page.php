@@ -7,6 +7,9 @@
                     Pedido
                 </div>
                 <ul class="list-group list-group-flush">
+                    <?php if(!@$usuario_selected) { ?>
+                        <li class="list-group-item">Propietario: <?=$pedidos->usuariofk;?></li>
+                    <?php } ?>
                     <li class="list-group-item">Puertos: <?=$pedidos->puertos;?></li>
                     <li class="list-group-item">Monitor: <?=$pedidos->monitor;?> </li>
                     <li class="list-group-item">Tarjeta Madre: <?=$pedidos->tarjeta_madre;?></li>
